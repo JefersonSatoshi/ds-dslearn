@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.time.Instant;
 import java.util.Objects;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -22,6 +23,8 @@ public class Notification implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String text;
+	
+	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
 	private Instant moment;
 	private boolean read;
 	private String route;
