@@ -34,7 +34,7 @@ public class Offer implements Serializable {
 	private Instant endMoment;
 	
 	@ManyToOne
-	@JoinColumn(name = "Course_id")
+	@JoinColumn(name = "course_id")
 	private Course course;
 	
 	@OneToMany(mappedBy = "offer")

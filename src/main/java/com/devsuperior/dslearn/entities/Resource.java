@@ -33,7 +33,7 @@ public class Resource implements Serializable {
 	private String externalLink;
 	
 	@ManyToOne
-	@JoinColumn(name = "Offer_id")
+	@JoinColumn(name = "offer_id")
 	private Offer offer;
 	
 	@OneToMany(mappedBy = "resource")

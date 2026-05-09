@@ -16,11 +16,11 @@ public class EnrollmentPK implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@ManyToOne
-	@JoinColumn(name = "User_id")
+	@JoinColumn(name = "user_id")
 	private User user;
 	
 	@ManyToOne
-	@JoinColumn(name = "Offer_id")
+	@JoinColumn(name = "offer_id")
 	private Offer offer;
 	
 	public EnrollmentPK() {
