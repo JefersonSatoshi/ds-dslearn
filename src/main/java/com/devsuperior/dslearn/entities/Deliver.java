@@ -31,7 +31,7 @@ public class Deliver implements Serializable{
 	private Instant moment;
 	private DeliverStatus status;
 	private String feedback;
-	private Integer correntCount;
+	private Integer correctCount;
 	
 	@ManyToOne
 	@JoinColumns({
@@ -48,7 +48,7 @@ public class Deliver implements Serializable{
 
 	}
 	
-	public Deliver(Long id, String uri, Instant moment, DeliverStatus status, String feedback, Integer correntCount,
+	public Deliver(Long id, String uri, Instant moment, DeliverStatus status, String feedback, Integer correctCount,
 			Enrollment enrollment, Lesson lesson) {
 		super();
 		this.id = id;
@@ -56,7 +56,7 @@ public class Deliver implements Serializable{
 		this.moment = moment;
 		this.status = status;
 		this.feedback = feedback;
-		this.correntCount = correntCount;
+		this.correctCount = correctCount;
 		this.enrollment = enrollment;
 		this.lesson = lesson;
 	}
@@ -101,12 +101,12 @@ public class Deliver implements Serializable{
 		this.feedback = feedback;
 	}
 
-	public Integer getCorrentCount() {
-		return correntCount;
+	public Integer getcorrectCount() {
+		return correctCount;
 	}
 
-	public void setCorrentCount(Integer correntCount) {
-		this.correntCount = correntCount;
+	public void setcorrectCount(Integer correctCount) {
+		this.correctCount = correctCount;
 	}
 
 	public Enrollment getEnrollment() {
